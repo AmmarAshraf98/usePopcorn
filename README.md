@@ -1,5 +1,5 @@
-usePopCorn
-usePopCorn is a React-based movie rating application that allows users to search for movies, view detailed information, and rate them using a star rating system. The app fetches movie data from the OMDB API and provides a user-friendly interface for managing a watched list and viewing movie details.
+Use-Popcorn
+usePopCorn is a React-based movie rating application that allows users to search for movies, view detailed information, and rate them using a star rating system. The app fetches movie data from the OMDB API and provides a user-friendly interface for managing a watched list and viewing movie details. It features component composition, robust error handling, request control to cancel ongoing API requests, and reusable components for a consistent and maintainable codebase.
 
 Demo : https://use-popcorn-smoky-beta.vercel.app/
 
