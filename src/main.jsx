@@ -125,7 +125,7 @@ export default function App() {
       setError("");
       setloading(true);
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=${apiKey}&s=${query}`,
+        `https://www.omdbapi.com/?apikey=${apiKey}&s=${query}`,
         { signal }
       );
 
@@ -202,7 +202,6 @@ export default function App() {
           {selectedID ? (
             <MovieDetails
               watched={watched}
-              // key={selectedID}
               movieID={selectedID}
               onAddToWatched={handleAddToWatched}
               onOpenDetails={setSelectedID}
