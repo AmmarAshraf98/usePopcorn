@@ -49,7 +49,7 @@ export default function MovieDetails({
       setloading(true);
       try {
         const res = await fetch(
-          `http://www.omdbapi.com/?i=${movieID}&apikey=f87a9968`
+          `https://www.omdbapi.com/?i=${movieID}&apikey=f87a9968`
         );
         if (!res.ok) throw new Error("movie details not found");
         const data = await res.json();
