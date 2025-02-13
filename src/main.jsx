@@ -107,7 +107,12 @@ const tempWatchedData = [
 
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState([]);
+  const [watched, setWatched] = useState(() => {
+    const x = JSON.parse(localStorage.getItem("Watched"));
+    if (x) return x;
+    else return [];
+  });
+
   const [loading, setloading] = useState(true);
   const [error, setError] = useState("");
   const [query, setQuery] = useState("");
