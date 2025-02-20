@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { WatchedFilm } from "../WatchedFilm/WatchedFilm";
 
 export function WatchedList({ watched, onDelteMovie }) {
-  useEffect(() => {
-    localStorage.setItem("Watched", JSON.stringify(watched));
-  }, [watched]);
+  // useEffect(() => {
+  //   localStorage.setItem("Watched", JSON.stringify(watched));
+  // }, [watched]);
 
   return (
     <ul className='list'>

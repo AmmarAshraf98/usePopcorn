@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loadear from "../Loadear/Loadear";
 import StarRating from "../StarRating/StarRating";
 import ErrorMsg from "../ErrorMsg/ErrorMsg";
+import { useKey } from "../customHooks/useKey/useKey";
 
 export default function MovieDetails({
   movieID,
@@ -72,21 +73,7 @@ export default function MovieDetails({
     };
   }, [movieID]);
 
-  // cleaning event
-  useEffect(() => {
-    const handleKeyupToClose = (e) => {
-      if (e.key !== "Escape") return;
-      handleCloseDetails();
-    };
-
-    // add Escape button to close the movie details
-    document.addEventListener("keydown", handleKeyupToClose);
-
-    return () => {
-      // clear the event
-      document.removeEventListener("keydown", handleKeyupToClose);
-    };
-  }, []);
+  useKey("Escape", handleCloseDetails);
 
   return (
     <>
